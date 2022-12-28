@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class NavComponent implements OnInit {
   list = [
     {
-      route: 'home',
+      route: 'dashboard',
       name: 'Home',
     },
     {
