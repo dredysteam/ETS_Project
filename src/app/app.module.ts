@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 // components
 import { HeaderComponent } from './components/header/header.component';
+import { NavComponent } from './components/nav/nav.component';
 
 //feature modules
 import { AuthModule } from 'src/auth/auth.module';
@@ -15,9 +16,9 @@ import { AuthModule } from 'src/auth/auth.module';
 export const ROUTES: Routes = [];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, NavComponent],
   imports: [BrowserModule, RouterModule.forRoot(ROUTES), AuthModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, NavComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
