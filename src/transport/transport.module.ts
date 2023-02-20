@@ -8,6 +8,11 @@ export const ROUTES: Routes = [
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
+  {
+    path: 'quotation',
+    loadChildren: () =>
+      import('./quotation/quotation.module').then((m) => m.QuotationModule),
+  },
 ];
 @NgModule({
   declarations: [],

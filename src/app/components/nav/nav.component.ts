@@ -13,8 +13,8 @@ export class NavComponent implements OnInit {
       name: 'Home',
     },
     {
-      route: 'Section2',
-      name: 'Section2',
+      route: 'quotation',
+      name: 'Quotation',
     },
     {
       route: 'Section3',

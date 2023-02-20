@@ -1,0 +1,16 @@
+.quote-form {
+  padding: 9.6rem 0;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.step-quote {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #cf711f;
+}
