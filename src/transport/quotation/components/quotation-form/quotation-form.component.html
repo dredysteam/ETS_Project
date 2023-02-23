@@ -1,0 +1,218 @@
+<form
+  class="quote-form"
+  action=""
+  (ngSubmit)="handleSubmit(form.value)"
+  #form="ngForm"
+  novalidate
+>
+  <div class="container">
+    <span class="subheading">Get a Freight Quote</span>
+  </div>
+
+  <div class="container grid grid--3-cols">
+    <div class="form-group step-quote">
+      <h3 class="heading-terciary">
+        Where are you shipping from? - Pickup Location
+      </h3>
+      <label class="form-label step-description" for="pickup-zipcode"
+        >Zipcode:</label
+      >
+      <input
+        class="form-control step-description"
+        type="text"
+        [class.is-invalid]="pickupZipCode.invalid && pickupZipCode.touched"
+        [ngModel]="quotation.pickupZipCode"
+        name="pickupZipCode"
+        placeholder="Enter ZipCode"
+        required
+        #pickupZipCode="ngModel"
+      />
+      <small
+        *ngIf="pickupZipCode.invalid && pickupZipCode.touched"
+        class="form-text text-danger"
+        >Please enter Pickup ZipCode</small
+      >
+      <br />
+      <label class="form-label step-description" for="pickup-date"
+        >Pickup Date:</label
+      >
+      <input
+        class="form-control step-description"
+        type="date"
+        [class.is-invalid]="pickupDate.invalid && pickupDate.touched"
+        id="pickup-date"
+        name="pickup-date"
+        [ngModel]="quotation.pickupDate"
+        #pickupDate="ngModel"
+        required
+      />
+      <small
+        *ngIf="pickupDate.invalid && pickupDate.touched"
+        class="form-text text-danger"
+        >Please choose Date</small
+      >
+      <br />
+      <label class="form-check-label" for="exampleCheck1"
+        >Do you require a Lift Gate?</label
+      >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    </div>
+    <div class="form-group step-quote">
+      <h3 class="heading-terciary">
+        Where are you shipping to? - Delivery Location
+      </h3>
+      <label class="form-label step-description" for="delivery-zipcode"
+        >Zipcode:</label
+      >
+      <input
+        class="form-control step-description"
+        type="text"
+        [class.is-invalid]="deliveryZipcode.invalid && deliveryZipcode.touched"
+        name="deliveryZipcode"
+        #deliveryZipcode="ngModel"
+        ngModel
+        required
+      />
+      <small
+        *ngIf="deliveryZipcode.invalid && deliveryZipcode.touched"
+        class="form-text text-danger"
+        >Please enter Delivery ZipCode</small
+      >
+      <br />
+      <label class="form-check-label" for="exampleCheck1"
+        >Do you require Appointment?</label
+      >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    </div>
+    <div class="form-group step-quote">
+      <h3 class="heading-terciary">Additional Shipping Information</h3>
+      <label class="form-label step-description" for="commodity"
+        >Commodity:</label
+      >
+      <input
+        class="form-control step-description"
+        type="text"
+        [class.is-invalid]="commodity.invalid && commodity.touched"
+        #commodity="ngModel"
+        ngModel
+        name="commodity"
+        placeholder="e.g food"
+        required
+      />
+      <small
+        *ngIf="commodity.invalid && commodity.touched"
+        class="form-text text-danger"
+        >Do you know the commodity?</small
+      >
+
+      <br />
+      <label class="form-label step-description" for="pallet-type"
+        >Pallet Type:</label
+      >
+      <select
+        class="form-control step-description"
+        id="pallet-type"
+        name="pallet-type"
+        required
+      >
+        <option value="40x48">40 x 48</option>
+        <option value="40x40">40 x 40</option>
+      </select>
+      <br />
+      <label class="form-label step-description" for="pallet-height"
+        >Pallet Height:</label
+      >
+      <input
+        class="form-control step-description"
+        type="number"
+        [class.is-invalid]="palletHeight.invalid && palletHeight.touched"
+        #palletHeight="ngModel"
+        ngModel
+        name="palletHeight"
+        required
+      />
+      <small
+        *ngIf="palletHeight.invalid && palletHeight.touched"
+        class="form-text text-danger"
+        >Please enter Pallet Hight</small
+      >
+      <br />
+      <label class="form-label step-description" for="quantity"
+        >Quantity:</label
+      >
+      <input
+        class="form-control step-description"
+        type="number"
+        [class.is-invalid]="quantity.invalid && quantity.touched"
+        #quantity="ngModel"
+        ngModel
+        name="quantity"
+        required
+      />
+      <small
+        *ngIf="quantity.invalid && quantity.touched"
+        class="form-text text-danger"
+        >Please enter Pallet Quantity</small
+      >
+      <br />
+      <label class="form-label step-description" for="total-weight"
+        >Total Weight:</label
+      >
+      <input
+        class="form-control step-description"
+        type="number"
+        [class.is-invalid]="totalWeight.invalid && totalWeight.touched"
+        #totalWeight="ngModel"
+        ngModel
+        name="totalWeight"
+        required
+      />
+      <small
+        *ngIf="totalWeight.invalid && totalWeight.touched"
+        class="form-text text-danger"
+        >Please enter Total Weight</small
+      >
+      <br />
+      <label class="form-label step-description" for="dry-van"
+        >Dry Van or Refrigerated:</label
+      >
+      <select
+        class="form-control step-description"
+        id="dry-van"
+        name="dry-van"
+        required
+      >
+        <option value="Dry Van">Dry Van</option>
+        <option value="Refrigerated">Refrigerated</option>
+      </select>
+      <br />
+      <!-- <label class="step-description" for="temperature">Temperature:</label>
+      <input
+        class="step-description"
+        type="text"
+        id="temperature"
+        name="temperature"
+      /> -->
+      <br />
+      <!-- <label class="step-description" for="contact-number"
+        >Contact Number:</label
+      >
+      <input
+        class="step-description"
+        type="tel"
+        id="contact-number"
+        name="contact-number"
+        required
+      /> -->
+      <br />
+
+      <button
+        class="btn btn--full margin-right-sm"
+        [disabled]="form.invalid"
+        type="submit"
+      >
+        Get Quote
+      </button>
+    </div>
+  </div>
+</form>

@@ -13,12 +13,12 @@ export class NavComponent implements OnInit {
       name: 'Home',
     },
     {
-      route: 'quotation',
-      name: 'Quotation',
+      route: 'howitworks',
+      name: 'How It Works',
     },
     {
-      route: 'Section3',
-      name: 'Section4',
+      route: 'quotation',
+      name: 'Quotation',
     },
   ];
   constructor() {}

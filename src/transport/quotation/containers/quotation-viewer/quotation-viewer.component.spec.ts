@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetQuoteComponent } from './get-quote.component';
+import { QuotationViewerComponent } from './quotation-viewer.component';
 
-describe('GetQuoteComponent', () => {
-  let component: GetQuoteComponent;
-  let fixture: ComponentFixture<GetQuoteComponent>;
+describe('QuotationViewerComponent', () => {
+  let component: QuotationViewerComponent;
+  let fixture: ComponentFixture<QuotationViewerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetQuoteComponent ]
+      declarations: [ QuotationViewerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GetQuoteComponent);
+    fixture = TestBed.createComponent(QuotationViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
