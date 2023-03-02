@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Quotation } from './models/quotation.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,11 @@ import { Injectable } from '@angular/core';
 export class QuotationService {
   constructor(private http: HttpClient) {}
 
-  getCountries() {
-    return this.http.get('https://restcountries.eu/rest/v2/lang/es');
+  // getCountries() {
+  //   return this.http.get('https://restcountries.com/v2/all');
+  // }
+
+  addQuotation(quotation: Quotation) {
+    console.log(quotation);
   }
 }

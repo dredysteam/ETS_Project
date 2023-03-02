@@ -1,8 +1,8 @@
 export interface Quotation {
-  pickupZipCode?: number;
+  pickupZipcode?: number;
   pickupDate?: Date;
-  lifgate?: boolean;
-  deliveryZipCode?: number;
+  liftgate?: boolean;
+  deliveryZipcode?: number;
   appointment?: boolean;
   commodity?: string;
   palletType?: string;

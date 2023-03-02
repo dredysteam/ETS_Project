@@ -1,0 +1,16 @@
+<div class="stock-product" [formGroup]="parent">
+  <div formArrayName="stockPallets">
+    <div *ngFor="let item of pallets; let i = index">
+      <div class="stock-product__content" [formGroupName]="i">
+        <div class="stock-product__name">
+          {{ item.value.type }}
+        </div>
+        <div class="stock-product__name">
+          {{ item.value.high }}
+        </div>
+        <input type="number" formControlName="quantity" />
+        <button type="button">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
