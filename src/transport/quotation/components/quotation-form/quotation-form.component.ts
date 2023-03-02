@@ -63,6 +63,11 @@ export class QuotationFormComponent implements OnInit {
     control.push(this.createStockPallet(stockPallet));
   }
 
+  removeStock({ group, index }: { group: FormGroup; index: number }) {
+    const control = this.form.get('stockPallets') as FormArray;
+    control.removeAt(index);
+  }
+
   handleSubmit() {
     console.log(this.form);
     // this.create.emit(quotation);

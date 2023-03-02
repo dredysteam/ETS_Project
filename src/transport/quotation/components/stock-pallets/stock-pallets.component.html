@@ -9,7 +9,13 @@
           {{ item.value.high }}
         </div>
         <input type="number" formControlName="quantity" />
-        <button type="button">Remove</button>
+        <button
+          (click)="onRemove(item.value, i)"
+          class="btn btn-danger"
+          type="button"
+        >
+          Remove
+        </button>
       </div>
     </div>
   </div>

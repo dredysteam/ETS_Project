@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
+import { StockPallet } from '../../models/stockpallet.interface';
 
 @Component({
   selector: 'app-stock-pallets',
@@ -9,11 +10,17 @@ import { FormArray, FormGroup } from '@angular/forms';
 export class StockPalletsComponent implements OnInit {
   @Input() parent: FormGroup;
 
+  @Output() removed = new EventEmitter<any>();
+
   constructor() {}
 
   ngOnInit(): void {}
 
   get pallets() {
     return (this.parent.get('stockPallets') as FormArray).controls;
+  }
+
+  onRemove(group, index) {
+    this.removed.emit({ group, index });
   }
 }

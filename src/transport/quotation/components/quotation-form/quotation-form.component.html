@@ -22,7 +22,10 @@
       (added)="addStock($event)"
     ></app-pallet-selector>
 
-    <app-stock-pallets [parent]="form"></app-stock-pallets>
+    <app-stock-pallets
+      [parent]="form"
+      (removed)="removeStock($event)"
+    ></app-stock-pallets>
 
     <button
       class="btn btn--full margin-right-sm"
