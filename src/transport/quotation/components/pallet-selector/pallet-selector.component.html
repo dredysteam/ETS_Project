@@ -1,31 +1,18 @@
-<div [formGroup]="parent" class="step-quote">
-  <div formGroupName="selector" class="form-group">
-    <br />
-    <label class="form-label step-description">Pallet Type:</label>
-    <select class="form-control step-description" formControlName="type">
+<div [formGroup]="parent" class="quotation-form-item">
+  <div formGroupName="selector" class="pallet-selector">
+    <label>Pallet Type:</label>
+    <select formControlName="type">
       <option value="">Select pallet type</option>
       <option *ngFor="let item of palletTypes" [value]="item.id">
         {{ item.type }}
       </option>
     </select>
-    <br />
-    <label class="form-label step-description">Pallet Height:(inches)</label>
-    <input
-      class="form-control step-description"
-      type="number"
-      formControlName="high"
-    />
+    <label>Pallet Height:(inches)</label>
+    <input type="number" formControlName="high" />
 
-    <br />
-    <label class="form-label step-description">Pallet Quantity:</label>
-    <input
-      class="form-control step-description"
-      type="number"
-      formControlName="quantity"
-    />
-    <button type="button" class="btn btn-primary" (click)="onAdd()">
-      Add stock
-    </button>
+    <label>Pallet Quantity:</label>
+    <input type="number" formControlName="quantity" />
+    <a href="" class="btn btn--outline" (click)="onAdd()"> Add stock </a>
 
     <!-- <label class="step-description" for="temperature">Temperature:</label>
     <input
@@ -34,7 +21,6 @@
       id="temperature"
       name="temperature"
     /> -->
-    <br />
     <!-- <label class="step-description" for="contact-number"
       >Contact Number:</label
     >
@@ -45,6 +31,5 @@
       name="contact-number"
       required
     /> -->
-    <br />
   </div>
 </div>

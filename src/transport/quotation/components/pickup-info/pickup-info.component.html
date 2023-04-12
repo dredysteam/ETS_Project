@@ -1,11 +1,11 @@
-<div [formGroup]="parent" class="step-quote">
-  <div formGroupName="pickupInfo" class="form-group">
+<div [formGroup]="parent" class="quotation-form-item">
+  <div formGroupName="pickupInfo" class="flex-y-container">
     <h3 class="heading-terciary">
       Where are you shipping from? - Pickup Location
     </h3>
 
+    <label>Enter Pickuo ZipCode</label>
     <input
-      class="form-control step-description"
       type="text"
       placeholder="Enter Pickup ZipCode"
       formControlName="pickupZipcode"
@@ -13,20 +13,13 @@
     <!-- <small *ngIf="pickupZipcodeNotValid" class="text-danger"
       >Please enter valid ZipCode</small
     > -->
-    <br />
-    <label class="form-label step-description">Pickup Date:</label>
-    <input
-      class="form-control step-description"
-      type="date"
-      formControlName="pickupDate"
-    />
 
-    <br />
-    <label class="form-check-label">Do you require a Lift Gate?</label>
-    <input
-      type="checkbox"
-      class="form-check-input"
-      formControlName="liftgate"
-    />
+    <label>Pickup Date:</label>
+    <input type="date" formControlName="pickupDate" />
+
+    <div class="flex-container flex-ss">
+      <label class="liftgate-label">Do you require a Lift Gate?</label>
+      <input type="checkbox" formControlName="liftgate" class="checkbox-item" />
+    </div>
   </div>
 </div>

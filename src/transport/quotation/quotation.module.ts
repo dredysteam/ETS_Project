@@ -6,9 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 // containers
 import { QuotationViewerComponent } from './containers/quotation-viewer/quotation-viewer.component';
+import { QuotationFormComponent } from './containers/quotation-form/quotation-form.component';
 
 // components
-import { QuotationFormComponent } from './components/quotation-form/quotation-form.component';
 import { PickupInfoComponent } from './components/pickup-info/pickup-info.component';
 import { DeliveryInfoComponent } from './components/delivery-info/delivery-info.component';
 import { AditionalInfoComponent } from './components/aditional-info/aditional-info.component';

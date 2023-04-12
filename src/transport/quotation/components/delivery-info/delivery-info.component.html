@@ -1,11 +1,10 @@
-<div [formGroup]="parent" class="step-quote">
-  <div formGroupName="deliveryInfo" class="form-group">
+<div [formGroup]="parent" class="quotation-form-item">
+  <div formGroupName="deliveryInfo" class="flex-y-container">
     <h3 class="heading-terciary">
       Where are you shipping to? - Delivery Location
     </h3>
-    <label class="form-label step-description">Zipcode:</label>
+    <label>Zipcode:</label>
     <input
-      class="form-control step-description"
       type="text"
       placeholder="Enter Delivery ZipCode"
       formControlName="deliveryZipcode"
@@ -13,13 +12,13 @@
     <!-- <small *ngIf="deliveryZipcodeNotValid" class="text-danger"
       >Please enter valid ZipCode</small
     > -->
-
-    <br />
-    <label class="form-check-label">Do you require Appointment?</label>
-    <input
-      type="checkbox"
-      class="form-check-input"
-      formControlName="appointment"
-    />
+    <div class="flex-container flex-ss">
+      <label>Do you require Appointment?</label>
+      <input
+        class="checkbox-item"
+        type="checkbox"
+        formControlName="appointment"
+      />
+    </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 export interface Quotation {
+  id?: string;
   pickupZipcode?: number;
   pickupDate?: Date;
   liftgate?: boolean;

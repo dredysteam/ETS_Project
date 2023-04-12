@@ -1,26 +1,13 @@
-<div [formGroup]="parent" class="step-quote">
-  <div formGroupName="aditionalInfo" class="form-group">
+<div [formGroup]="parent" class="quotation-form-item">
+  <div formGroupName="aditionalInfo" class="flex-y-container">
     <h3 class="heading-terciary">Additional Shipping Information</h3>
-    <label class="form-label step-description">Commodity:</label>
-    <input
-      class="form-control step-description"
-      type="text"
-      placeholder="e.g food"
-      formControlName="commodity"
-    />
-    <br />
-    <label class="form-label step-description" for="total-weight"
-      >Total Weight:</label
-    >
-    <input
-      class="form-control step-description"
-      type="number"
-      formControlName="totalWeight"
-    />
+    <label>Commodity:</label>
+    <input type="text" placeholder="e.g food" formControlName="commodity" />
+    <label for="total-weight">Total Weight:</label>
+    <input type="number" formControlName="totalWeight" />
 
-    <br />
-    <label class="form-label step-description">Freight Type:</label>
-    <select class="form-control step-description" formControlName="freightType">
+    <label>Freight Type:</label>
+    <select formControlName="freightType">
       <option value="Dry Van">Dry Van</option>
       <option value="Refrigerated">Refrigerated</option>
     </select>
